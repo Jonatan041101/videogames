@@ -50,13 +50,15 @@ export default function Cards() {
 		}
 		if (valueSearch.length > 0) {
 			const queryStr = { ...query, search: valueSearch, ...queryFilter };
+
 			const resGames = await getGames(queryStr);
 			if (resGames) {
 				getVideoGames(resGames);
 			}
 			return;
 		}
-		const resGames = await getGames(query);
+		const queryStr = { ...query, ...queryFilter };
+		const resGames = await getGames(queryStr);
 		if (resGames) {
 			getVideoGames(resGames);
 		}

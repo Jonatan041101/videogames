@@ -53,7 +53,6 @@ export default function NavBar() {
 	const handleChangePage = (page: string) => {
 		setBackgroundId(() => page);
 	};
-	console.log({ navBarView });
 
 	return (
 		<div className="nav__aux">

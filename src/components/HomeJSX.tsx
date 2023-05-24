@@ -31,8 +31,6 @@ export default function HomeJSX({
 	handleChangeVideo,
 	cut,
 }: Props) {
-	console.log({ gameVideo });
-
 	return (
 		<div className="assets">
 			<section
