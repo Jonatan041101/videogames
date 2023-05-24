@@ -4,6 +4,7 @@
 	@include flex(column, nowrap, flex-start, center, 1em);
 	&__searchs {
 		width: 100%;
+		@include flex(row, nowrap, center, center, 0);
 		@include responsive($first-query) {
 			width: 97%;
 		}

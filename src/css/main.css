@@ -1275,6 +1275,11 @@ select:focus {
 }
 .cards__searchs {
   width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
 }
 @media screen and (max-width: 1250px) {
   .cards__searchs {
