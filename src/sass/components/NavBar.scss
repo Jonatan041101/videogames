@@ -6,7 +6,19 @@
 	transition: 0.5s ease;
 	z-index: 5;
 	max-width: 5em;
+	background: $color-back;
 
+	// &__aux {
+	// 	max-width: 5em;
+	// 	height: 100vh;
+	// 	width: 10%;
+	// }
+	@include responsive($second-query) {
+		position: fixed;
+		left: 0;
+		z-index: 120;
+		display: none;
+	}
 	&__nav {
 		@include flex(column, nowrap, space-between, center, 0.5em);
 		height: 100%;
@@ -40,5 +52,24 @@
 		height: 100%;
 		width: 100%;
 		border-radius: 0.5em;
+	}
+	&__button {
+		@include flex(row, nowrap, center, center, 0);
+		position: fixed;
+		z-index: 30;
+		bottom: 4em;
+		right: 0.5em;
+		background: $color-buttons;
+		height: 2.5em;
+		width: 2.5em;
+		border-radius: 50%;
+		cursor: pointer;
+		&:hover {
+			background: #267bfc;
+		}
+		display: none;
+		@include responsive($second-query) {
+			display: flex;
+		}
 	}
 }

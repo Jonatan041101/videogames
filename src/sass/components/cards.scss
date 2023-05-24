@@ -2,4 +2,10 @@
 	min-height: 100vh;
 	flex-grow: 1;
 	@include flex(column, nowrap, flex-start, center, 1em);
+	&__searchs {
+		width: 100%;
+		@include responsive($first-query) {
+			width: 97%;
+		}
+	}
 }

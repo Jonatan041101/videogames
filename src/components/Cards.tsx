@@ -64,7 +64,9 @@ export default function Cards() {
 
 	return (
 		<div className="cards">
-			<SearchBar />
+			<div className="cards__searchs">
+				<SearchBar />
+			</div>
 			<ChangePage
 				countsPages={countPageSize}
 				results={countResults}

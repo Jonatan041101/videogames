@@ -18,6 +18,12 @@
 		overflow: hidden;
 		width: calc(100vw - 425px);
 		max-width: 70em;
+		@include responsive($first-query) {
+			width: 85vw;
+		}
+		@include responsive($second-query) {
+			width: 100%;
+		}
 		// mask-image: linear-gradient(
 		// 	to right,
 		// 	transparent 0%,

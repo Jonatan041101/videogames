@@ -2,4 +2,8 @@
 	flex-grow: 4;
 	max-width: 70em;
 	background: #0f1f3c;
+	@include responsive($second-query) {
+		width: 70vw;
+		// background: #183c0f;
+	}
 }

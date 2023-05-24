@@ -5,6 +5,10 @@
 	width: 100%;
 	@include flex(column, nowrap, flex-end, flex-start, 0.6em);
 	padding: 2em 5em;
+	@include responsive(800px) {
+		padding: 0.3em 0.5em;
+		font-size: 0.8em;
+	}
 	&__article {
 		// background: red;
 		font-weight: 600;
@@ -15,11 +19,12 @@
 		@include flex(column, nowrap, flex-start, flex-start, 1em);
 	}
 	&__buttons {
-		@include flex(row, nowrap, flex-start, flex-start, 0.6em);
+		@include flex(row, nowrap, flex-start, flex-start, 0.4em);
 	}
 	&__platform {
-		padding: 0.5em;
-		border-radius: 0.5em;
+		padding: 0.4em;
+		border-radius: 0.3em;
+		font-size: 0.9em;
 	}
 	&__h2 {
 		font-size: clamp(1.2em, 0.7em + 2.3vw, 3em);

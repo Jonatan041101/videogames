@@ -37,7 +37,6 @@ export default function HomeMain() {
 
 	return (
 		<HomeJSX
-			defect
 			handleMuted={handleMuted}
 			muted={muted}
 			countRef={countRef}

@@ -10,4 +10,19 @@
 	'./components/filters.scss', './components/games.scss',
 	'./components/card.scss', './components/cards.scss',
 	'./components/changepage.scss', './components/button.scss',
-	'./components/filselect.scss', './components/favorits.scss';
+	'./components/filselect.scss', './components/favorits.scss', './data/data.scss';
+.main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/* align-items: center; */
+	/* padding: 6rem; */
+	padding: 1em;
+	min-height: 100vh;
+	gap: 1em;
+
+	/* background: red; */
+	@include responsive($first-query) {
+		@include flex(row, wrap, flex-start, center, 0.5em);
+	}
+}

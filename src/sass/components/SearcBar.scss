@@ -3,4 +3,5 @@
 	flex-grow: 4;
 	width: 100%;
 	max-width: 1120px;
+	@include flex(row, nowrap, center, center, 0);
 }

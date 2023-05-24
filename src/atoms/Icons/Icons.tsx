@@ -17,6 +17,7 @@ import Gamepad from './Gamepad';
 import Down from './Down';
 import Close from './Close';
 import HeartLike from './HeartLike';
+import Bars from './Bars';
 export const HAndW = 30;
 export type IconsType =
 	| 'heart'
@@ -36,7 +37,8 @@ export type IconsType =
 	| 'gamepad'
 	| 'down'
 	| 'close'
-	| 'heart-like';
+	| 'heart-like'
+	| 'bars';
 interface Props {
 	icon: IconsType;
 }
@@ -62,6 +64,7 @@ export default function Icons({ icon }: Props) {
 			{icon === 'down' && <Down />}
 			{icon === 'close' && <Close />}
 			{icon === 'heart-like' && <HeartLike />}
+			{icon === 'bars' && <Bars />}
 		</>
 	);
 }

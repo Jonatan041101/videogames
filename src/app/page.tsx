@@ -7,7 +7,7 @@ export default async function Home() {
 	const { platforms, videogames } = await getVideoGames();
 
 	return (
-		<main className={styles.main}>
+		<main className="main">
 			<MainC />
 			<Aside />
 		</main>

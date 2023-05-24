@@ -13,7 +13,6 @@ export const existFavoritsInLocaleStorage = () => {
 export const getFavorits = async () => {
 	const local = existFavoritsInLocaleStorage();
 	if (local) {
-		console.log(`${URL}games/${local[0]}?key${key}`);
 		const resFavorits = await Promise.all(
 			local.map((id) => fetch(`${URL}games/${id}?key=${key}`)),
 		);

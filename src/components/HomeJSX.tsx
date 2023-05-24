@@ -12,7 +12,6 @@ interface Props {
 	countRef: REFNUMBER;
 	translateRef: REFNUMBER;
 	refVideo: React.MutableRefObject<HTMLVideoElement | null>;
-	defect?: boolean;
 	handleChangeVideo: (video: number) => void;
 	cut: CutVideo;
 	muted: boolean;
@@ -28,17 +27,18 @@ export default function HomeJSX({
 	translateRef,
 	refVideo,
 	muted,
-	defect,
 	handleMuted,
 	handleChangeVideo,
 	cut,
 }: Props) {
+	console.log({ gameVideo });
+
 	return (
 		<div className="assets">
 			<section
 				className="assets__videos"
 				style={{
-					minHeight: `${defect ? '30em' : 'auto'}`,
+					minHeight: `${gameVideo?.results.length === 0 ? 'auto' : '30em'}`,
 				}}
 			>
 				{gameVideo?.results?.slice(cut.first, cut.second).map((game) => (

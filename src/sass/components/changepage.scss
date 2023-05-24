@@ -3,4 +3,7 @@
 	width: 100%;
 	// background: greenyellow;
 	@include flex(row, nowrap, center, center, 0.5em);
+	@include responsive($second-query) {
+		gap: 0.2em;
+	}
 }

@@ -1,8 +1,14 @@
 .page {
-	@include flex(row, nowrap, space-between, flex-start, 0.3em);
+	// @include flex(row, nowrap, flex-start, flex-start, 0.3em);
+	display: flex;
+	justify-content: space-between;
+	background: $color-back;
 	&__container {
 		// flex-grow: 6;
 		width: calc(100% - 5em);
 		background: #0f1f3c;
+		@include responsive($second-query) {
+			width: 100%;
+		}
 	}
 }

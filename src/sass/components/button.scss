@@ -6,7 +6,10 @@
 	cursor: pointer;
 	font-size: 1.1em;
 	font-weight: bold;
-
+	@include responsive($second-query) {
+		padding: 0.1em 0.3em;
+		font-size: 0.9em;
+	}
 	&:hover {
 		opacity: 0.8;
 	}

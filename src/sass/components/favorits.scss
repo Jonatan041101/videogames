@@ -3,4 +3,18 @@
 	@include flex(row, wrap, center, flex-start, 1em);
 	align-content: flex-start;
 	padding: 1em;
+	&__div {
+		min-height: calc(100vh - 2em);
+		@include flex(row, wrap, center, center, 1em);
+	}
+	&__text {
+		@include flex(column, wrap, center, center, 1em);
+		font-size: clamp(1em, 0.5em + 2.3vw, 2em);
+		letter-spacing: 0.1em;
+		// color: $color-gray;
+	}
+	&__image {
+		mix-blend-mode: multiply;
+		object-fit: contain;
+	}
 }

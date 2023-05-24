@@ -2,7 +2,7 @@
 	@include flex(column, wrap, flex-start, flex-start, 0.4em);
 	&__container {
 		@include flex(column, nowrap, flex-start, flex-start, 0.4em);
-		max-width: 12em;
+		width: 13em;
 		// background: red;
 	}
 	&__ul {

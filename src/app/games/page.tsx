@@ -1,3 +1,4 @@
+import ButtonFilter from '@/components/ButtonFilter';
 import Cards from '@/components/Cards';
 import Filters from '@/components/Filters';
 import { getGenres, getPlatforms, getStores, getTags } from '@/services/filter';
@@ -13,6 +14,7 @@ export default async function GamesPage() {
 		<div className="games">
 			<Filters genres={genres} platforms={platforms} tags={tags} stores={stores} />
 			<Cards />
+			<ButtonFilter />
 		</div>
 	);
 }

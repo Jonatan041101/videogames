@@ -18,10 +18,16 @@
 	&:hover {
 		transform: scale(1.1);
 	}
+	@include responsive($first-query) {
+		width: 15em;
+	}
 	&__container {
 		width: 100%;
 		@include flex(column, nowrap, space-between, space-between, 0.4em);
 		height: 100%;
+		@include responsive($first-query) {
+			@include flex(row, wrap, center, flex-start, 0.4em);
+		}
 	}
 	&__image {
 		position: absolute;

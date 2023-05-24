@@ -47,8 +47,6 @@ const backgroundColor = (color: GameColor) => {
 };
 
 export default function BtnPlatform({ platform }: Props) {
-	console.log(platform.platform.slug);
-
 	const background = backgroundColor(platform.platform.slug as GameColor);
 	return (
 		<div className="presentation__platform" style={{ background }}>

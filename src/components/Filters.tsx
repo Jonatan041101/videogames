@@ -22,9 +22,9 @@ export default function Filters({
 	platforms,
 }: PropsFilter) {
 	const [select, setSelect] = useState<Select | null>(null);
-	const { filters, valueSearch, getVideoGames, changeResults } = useBearStore(
-		(state) => state,
-	);
+
+	const { filters, valueSearch, getVideoGames, changeResults, filtersView } =
+		useBearStore((state) => state);
 
 	const handleChangeSelect = (name: Select) => {
 		if (name === select) {
@@ -37,8 +37,9 @@ export default function Filters({
 		changeResults(games.count);
 		getVideoGames(games);
 	};
+
 	return (
-		<div className="filters__container">
+		<div className="filters__container" data-view={filtersView}>
 			<div className="filters__div">
 				<FiltersMap
 					filters={tags}

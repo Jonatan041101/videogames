@@ -1,14 +1,27 @@
 .description {
 	@include flex(row, nowrap, flex-start, flex-start, 4em);
 	margin: 4em 2em;
+	@include responsive($first-query) {
+		flex-wrap: wrap;
+	}
+	@include responsive($second-query) {
+		margin: 4em 0.5em;
+	}
 	&__h3 {
 		font-size: 1.5em;
 		font-weight: bold;
+		@include responsive($second-query) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 	&__paragraph {
 		flex-grow: 2;
 		width: 50%;
 		@include flex(column, nowrap, flex-start, flex-start, 1em);
+		@include responsive($second-query) {
+			text-align: center;
+		}
 	}
 	&__p {
 		color: $color-gray;

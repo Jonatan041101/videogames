@@ -3,6 +3,8 @@ import Icons, { IconsType } from '@/atoms/Icons/Icons';
 import LiWithIcon from '@/atoms/LiWithIcon/LiWithIcon';
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useBearStore } from '@/store/store';
+import ButtonNavBar from './ButtonNavBar';
 export interface LinksNav {
 	id: number;
 	icon: JSX.Element;
@@ -44,38 +46,44 @@ const mapNav: LinksNav[] = [
 export default function NavBar() {
 	const path = usePathname();
 	const [backgroundId, setBackgroundId] = useState<string>(path);
+	const { navBarView } = useBearStore((state) => state);
 	useEffect(() => {
 		setBackgroundId(path);
 	}, [path]);
 	const handleChangePage = (page: string) => {
 		setBackgroundId(() => page);
 	};
+	console.log({ navBarView });
+
 	return (
-		<header className="nav">
-			<nav className="nav__nav">
-				<ul className="nav__ul">
-					<i>
-						<Icons icon="circle" />
-					</i>
-					<div className="nav__div">
-						{mapNav.map((li) => (
-							<LiWithIcon
-								li={li}
-								key={li.id}
-								select={backgroundId}
-								changePage={handleChangePage}
-							/>
-						))}
-					</div>
-				</ul>
-				{/* <ul className="nav__ul">
+		<div className="nav__aux">
+			<header className="nav" data-nav={navBarView}>
+				<nav className="nav__nav">
+					<ul className="nav__ul">
+						<i>
+							<Icons icon="circle" />
+						</i>
+						<div className="nav__div">
+							{mapNav.map((li) => (
+								<LiWithIcon
+									li={li}
+									key={li.id}
+									select={backgroundId}
+									changePage={handleChangePage}
+								/>
+							))}
+						</div>
+					</ul>
+					{/* <ul className="nav__ul">
 					<LiWithIcon
 						li={mapBottom}
 						select={backgroundId}
 						changePage={handleChangePage}
 					/>
 				</ul> */}
-			</nav>
-		</header>
+				</nav>
+			</header>
+			<ButtonNavBar />
+		</div>
 	);
 }

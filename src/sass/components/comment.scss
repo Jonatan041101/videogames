@@ -13,9 +13,15 @@
 	}
 	&__title {
 		font-weight: bold;
+		@include responsive($second-query) {
+			text-align: center;
+		}
 	}
 	&__p {
 		color: $color-gray;
+		@include responsive($second-query) {
+			text-align: center;
+		}
 	}
 	&__red {
 		color: $color-buttons;
