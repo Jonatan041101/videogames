@@ -27,6 +27,9 @@
 		@include responsive($first-query) {
 			width: 18em;
 		}
+		@include responsive($second-query) {
+			width: 100%;
+		}
 	}
 	&__image {
 		border-radius: 50%;

@@ -21,6 +21,10 @@
 	@include responsive($first-query) {
 		width: 15em;
 	}
+	@include responsive($second-query) {
+		width: 100%;
+		height: 15em;
+	}
 	&__container {
 		width: 100%;
 		@include flex(column, nowrap, space-between, space-between, 0.4em);
