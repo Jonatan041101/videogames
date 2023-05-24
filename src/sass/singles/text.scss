@@ -1,0 +1,11 @@
+.text {
+	@include flex(column, nowrap, flex-start, flex-start, 0.5em);
+	text-transform: capitalize;
+	&__text {
+		// font-weight: bold;
+		font-size: 1.1em;
+	}
+	&__info {
+		color: $color-gray;
+	}
+}

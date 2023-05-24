@@ -1,0 +1,8 @@
+.page {
+	@include flex(row, nowrap, space-between, flex-start, 0.3em);
+	&__container {
+		// flex-grow: 6;
+		width: calc(100% - 5em);
+		background: #0f1f3c;
+	}
+}

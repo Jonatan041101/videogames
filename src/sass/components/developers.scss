@@ -1,0 +1,10 @@
+.developers {
+	@include flex(column, nowrap, center, center, 1em);
+	&__section {
+		@include flex(row, wrap, center, center, 1em);
+		margin: 0 0 2em 0;
+	}
+	&__article {
+		@include flex(column, wrap, center, center, 1em);
+	}
+}

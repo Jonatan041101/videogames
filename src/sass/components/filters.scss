@@ -1,0 +1,68 @@
+.filters {
+	width: 13em;
+	position: relative;
+	&__container {
+		@include flex(column, nowrap, flex-start, center, 1.5em);
+		width: 15em;
+		padding: 5em 8em;
+		height: 100vh;
+		// background: red;
+
+		position: relative;
+	}
+
+	&__div {
+		position: fixed;
+		left: 6.8em;
+		@include flex(column, nowrap, center, flex-start, 1.5em);
+		padding: 0.8em 0.4em;
+		border: 0.1em solid #fff;
+		border-radius: 1em;
+	}
+	&__span {
+		width: 100%;
+		border: 0.1em solid #d6d6d6;
+		padding: 0.8em;
+		border-radius: 0.3em;
+		@include flex(row, nowrap, space-between, center, 0);
+		cursor: pointer;
+		&:hover {
+			border-color: $color-buttons;
+		}
+	}
+
+	&__ul {
+		position: absolute;
+		top: 2.8em;
+		padding: 0.5em 0;
+		z-index: 5;
+		background: #d6d4d4;
+		color: #333;
+		height: 20em;
+		overflow: auto;
+		width: 100%;
+		display: none;
+		border-radius: 0.3em;
+	}
+
+	&__li {
+		width: 100%;
+		padding: 0.8em;
+		cursor: pointer;
+		&:hover {
+			background: #ffffff73;
+		}
+	}
+	&__search {
+		align-self: flex-end;
+	}
+	&__button {
+		border: 0.1em solid #fff;
+		padding: 0.5em;
+		border-radius: 0.3em;
+		cursor: pointer;
+		&:hover {
+			border-color: $color-buttons;
+		}
+	}
+}

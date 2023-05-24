@@ -1,0 +1,41 @@
+.aside {
+	// background: green;
+	flex-grow: 2;
+	max-width: 16.5em;
+	// @include flex(column, nowrap, center, flex-start, 1em);
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	&__section {
+		@include flex(row, nowrap, space-around, center, 0);
+		height: 46px;
+		margin: 0 0 1em 0;
+		// background: #fff;
+	}
+	&__card {
+		@include flex(row, nowrap, flex-start, center, 1em);
+		padding: 0.5em 1em;
+		border-radius: 1em;
+		width: 100%;
+		cursor: pointer;
+		transition: 0.4s ease;
+		&:hover {
+			background: #4452854f;
+		}
+	}
+	&__image {
+		border-radius: 50%;
+		width: 2.5em;
+		height: 2.5em;
+	}
+	&__name {
+		text-transform: capitalize;
+	}
+	&__load {
+		width: 264px;
+		height: 56px;
+		background: #000;
+		border-radius: 1em;
+	}
+}
+// 849406

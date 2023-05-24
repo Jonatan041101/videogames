@@ -1,0 +1,13 @@
+.button {
+	background: $color-buttons;
+	padding: 0.4em 0.6em;
+	border-radius: 0.3em;
+	transition: 0.5s ease;
+	cursor: pointer;
+	font-size: 1.1em;
+	font-weight: bold;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}

@@ -1,0 +1,31 @@
+.description {
+	@include flex(row, nowrap, flex-start, flex-start, 4em);
+	margin: 4em 2em;
+	&__h3 {
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+	&__paragraph {
+		flex-grow: 2;
+		width: 50%;
+		@include flex(column, nowrap, flex-start, flex-start, 1em);
+	}
+	&__p {
+		color: $color-gray;
+		line-height: 1.5;
+	}
+	&__game {
+		@include flex(column, nowrap, flex-start, flex-start, 2em);
+	}
+	&__comments {
+		flex-grow: 2;
+		width: 50%;
+	}
+	&__texts {
+		width: 100%;
+		@include flex(row, nowrap, space-evenly, flex-start, 2em);
+	}
+	&__non {
+		text-align: center;
+	}
+}

@@ -1,0 +1,27 @@
+.filselect {
+	@include flex(column, wrap, flex-start, flex-start, 0.4em);
+	&__container {
+		@include flex(column, nowrap, flex-start, flex-start, 0.4em);
+		max-width: 12em;
+		// background: red;
+	}
+	&__ul {
+		@include flex(row, wrap, flex-start, flex-start, 0.4em);
+		height: 4em;
+		overflow: auto;
+	}
+	&__li {
+		@include flex(row, wrap, center, center, 0.4em);
+		padding: 0.2em;
+		border: 0.1em solid #fff;
+		border-radius: 0.2em;
+		font-size: 0.8em;
+		color: #dad1d1;
+	}
+	&__button {
+		cursor: pointer;
+		&:hover {
+			color: red;
+		}
+	}
+}

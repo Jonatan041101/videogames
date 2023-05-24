@@ -1,0 +1,46 @@
+.card {
+	@include flex(column, nowrap, center, center, 0em);
+	height: 20em;
+	cursor: pointer;
+	&__container {
+		flex-grow: 1;
+		@include flex(row, wrap, center, flex-start, 1em);
+		width: 100%;
+	}
+	&__div {
+		width: 12em;
+		height: 18em;
+		position: relative;
+	}
+	&__rating {
+		position: absolute;
+		bottom: 0.5em;
+		right: 0.5em;
+		background: $color-buttons;
+		padding: 0.3em;
+		border-radius: 0.5em;
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		border-radius: 0.5em;
+	}
+	&__h3 {
+		width: 12em;
+		height: 3em;
+		text-align: center;
+		@include flex(column, nowrap, center, center, 0em);
+	}
+	&__load {
+		width: 12em;
+		height: 18em;
+		background: #000;
+		border-radius: 1em;
+	}
+	&__favorit {
+		position: absolute;
+		top: 0.4em;
+		left: 0.4em;
+		cursor: pointer;
+	}
+}

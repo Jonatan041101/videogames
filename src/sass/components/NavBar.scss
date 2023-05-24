@@ -1,0 +1,44 @@
+.nav {
+	@include flex(column, nowrap, flex-start, center, 0.5em);
+	width: 10%;
+	height: 100vh;
+	position: relative;
+	transition: 0.5s ease;
+	z-index: 5;
+	max-width: 5em;
+
+	&__nav {
+		@include flex(column, nowrap, space-between, center, 0.5em);
+		height: 100%;
+		padding: 2.5em 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 10%;
+		max-width: 5em;
+	}
+	&__ul {
+		@include flex(column, nowrap, flex-start, center, 3em);
+	}
+	&__div {
+		@include flex(column, nowrap, flex-start, center, 0.5em);
+	}
+	&__li {
+		@include flex(row, nowrap, center, center, 0);
+		height: 3em;
+		width: 3em;
+		cursor: pointer;
+		position: relative;
+	}
+	&__i {
+		position: relative;
+		z-index: 10;
+	}
+	&__back {
+		background: $color-buttons;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border-radius: 0.5em;
+	}
+}

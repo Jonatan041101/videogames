@@ -1,0 +1,27 @@
+.title {
+	@include flex(column, nowrap, flex-start, flex-start, 1em);
+	// flex-grow: 1; //en caso de problemas eliminar
+	&__h2 {
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #fff;
+		text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 40px rgba(0, 123, 255, 0.7),
+			0 0 100px rgba(0, 123, 255, 0.7);
+		// font-family: Cursive;
+	}
+	&__span {
+		color: #3282ff;
+	}
+	&__section {
+		width: 100%;
+		@include flex(column, nowrap, flex-start, flex-start, 0.6em);
+	}
+	&__section:nth-child(2) {
+		flex-grow: 1;
+		height: 100%;
+	}
+}
+.title:nth-of-type(2) {
+	height: 50%;
+	flex-grow: 1;
+}

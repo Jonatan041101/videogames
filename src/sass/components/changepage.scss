@@ -1,0 +1,6 @@
+.changepage {
+	height: 4em;
+	width: 100%;
+	// background: greenyellow;
+	@include flex(row, nowrap, center, center, 0.5em);
+}

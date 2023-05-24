@@ -1,0 +1,23 @@
+.comment {
+	line-height: 1.7;
+	&__div {
+		@include flex(row, nowrap, flex-end, flex-end, 0.5em);
+		text-transform: capitalize;
+	}
+	&__icon {
+		background: #fff;
+		border-radius: 50%;
+		height: 1.875em;
+		width: 1.875em;
+		cursor: pointer;
+	}
+	&__title {
+		font-weight: bold;
+	}
+	&__p {
+		color: $color-gray;
+	}
+	&__red {
+		color: $color-buttons;
+	}
+}

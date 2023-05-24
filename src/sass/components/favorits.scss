@@ -1,0 +1,6 @@
+.favorits {
+	min-height: 100vh;
+	@include flex(row, wrap, center, flex-start, 1em);
+	align-content: flex-start;
+	padding: 1em;
+}
