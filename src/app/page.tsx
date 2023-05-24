@@ -10,7 +10,6 @@ export default async function Home() {
 		<main className={styles.main}>
 			<MainC />
 			<Aside />
-			{/* <Videogames platforms={platforms} videogames={videogames} /> */}
 		</main>
 	);
 }
