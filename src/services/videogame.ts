@@ -12,8 +12,10 @@ export const getGame = async (id: number) => {
 export const getVideoAndImageGame = async (id: number, name: string) => {
 	const resVideo = await fetch(`${URL}games/${id}/movies?key=${key}`);
 	const resImage = await fetch(`${URL}games/${name}/screenshots?key=${key}`);
+
 	const parseVideo = (await resVideo.json()) as VideoForGame;
 	const parseImage = (await resImage.json()) as ImageFetch;
+	console.log({ parseVideo, parseImage });
 	return {
 		parseVideo,
 		parseImage,

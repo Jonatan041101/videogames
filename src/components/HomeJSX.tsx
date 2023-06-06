@@ -31,6 +31,8 @@ export default function HomeJSX({
 	handleChangeVideo,
 	cut,
 }: Props) {
+	console.log(gameVideo?.results?.slice(cut.first, cut.second), { refVideo });
+
 	return (
 		<div className="assets">
 			<section
@@ -43,7 +45,7 @@ export default function HomeJSX({
 					<article className="assets__video" key={game.id}>
 						<div className="videoimage__video">
 							<video className="videoimage__source" ref={refVideo} autoPlay loop muted>
-								<source src={gameVideo?.results[0]?.data[480] ?? ''} />
+								<source src={gameVideo?.results[cut.first]?.data[480] ?? ''} />
 							</video>
 						</div>
 					</article>

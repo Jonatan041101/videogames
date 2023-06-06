@@ -13,6 +13,8 @@ export default function useVideo() {
 	const [muted, setMuted] = useState<boolean>(false);
 
 	const handleChangeVideo = (video: number) => {
+		console.log({ video });
+
 		setCut({
 			...cut,
 			first: video,
